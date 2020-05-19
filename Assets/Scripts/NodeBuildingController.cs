@@ -21,7 +21,7 @@ public class NodeBuildingController : MonoBehaviour
     
     private void OnMouseUpAsButton()
     {
-        if (!IsPointerOverUIObject())
+        if (!GameEvents.IsPointerOverUIObject())
         {
             if (!builded && lgm.selectedBuildingTag != "" )
             {
@@ -43,13 +43,5 @@ public class NodeBuildingController : MonoBehaviour
         }
     }
 
-    private bool IsPointerOverUIObject()
-    {
-        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
-        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-        List<RaycastResult> results = new List<RaycastResult>();
-        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
-        //Jeżeli klikamy na UI
-        return results.Count > 1;
-    }
+
 }

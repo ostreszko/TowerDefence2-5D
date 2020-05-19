@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class GuiClass
@@ -8,15 +9,17 @@ public class GuiClass
     Text hpText;
     public static int scoreResult;
     public int MaxHp;
-    public int currentHp;
+    public static int currentHp;
+    GameObject gameOverPanel;
 
-    public GuiClass(int scoreAmount, Text scoreResult, int maxHp, Text hpText)
+    public GuiClass(int scoreAmount, Text scoreResult, int maxHp, Text hpText, GameObject GameOverPanel)
     {
         this.scoreText = scoreResult;
         GuiClass.scoreResult = scoreAmount;
         this.MaxHp = maxHp;
-        this.currentHp = maxHp;
+        currentHp = maxHp;
         this.hpText = hpText;
+        gameOverPanel = GameOverPanel;
     }
 
     public void SetScore()
@@ -40,6 +43,15 @@ public class GuiClass
     {
         currentHp -= amount;
         hpText.text = currentHp.ToString();
+        PlayerDied();
+    }
+
+    public void PlayerDied()
+    {
+        if (currentHp <= 0)
+        {
+            gameOverPanel.SetActive(true);
+        }
     }
 
     public void SetHP()

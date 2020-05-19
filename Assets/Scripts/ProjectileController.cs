@@ -40,7 +40,6 @@ public class ProjectileController : MonoBehaviour
         targetedEnemy.GetHit(1f);
         objectPooler.SpawnFromPool("DamageParticle",transform.position,transform.rotation);
         gameObject.SetActive(false);
-
     }
 
     public void SeekTarget(Transform _target, Enemy _targetedEnemy)

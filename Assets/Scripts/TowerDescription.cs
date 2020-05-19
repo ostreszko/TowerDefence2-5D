@@ -41,7 +41,11 @@ public class TowerDescription : MonoBehaviour
 
     public void CanvasManager()
     {
-        towerCanvas.SetActive(!towerCanvas.activeSelf);
+        if (!GameEvents.IsPointerOverUIObject())
+        {
+            towerCanvas.SetActive(!towerCanvas.activeSelf);
+        }
+
     }
     
 }

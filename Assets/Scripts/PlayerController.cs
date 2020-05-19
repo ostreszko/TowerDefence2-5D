@@ -11,10 +11,11 @@ public class PlayerController : MonoBehaviour
     public Text hpText;
     public GuiClass guiClassObj;
     public int startGold;
+    public GameObject gameOverPanel;
     // Start is called before the first frame update
     void Start()
     {
-        guiClassObj = new GuiClass(startGold, scoreText, maxHp, hpText);
+        guiClassObj = new GuiClass(startGold, scoreText, maxHp, hpText, gameOverPanel);
         guiClassObj.SetScore();
         guiClassObj.SetHP();
         GameEvents.current.onHPDeplateTrigger += guiClassObj.DeplateHP;
@@ -26,6 +27,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         
+    }
+
+
+
+    public void ShowDeadGui()
+    {
+        guiClassObj.PlayerDied();
     }
 }
 

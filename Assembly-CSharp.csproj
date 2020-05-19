@@ -63,13 +63,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\KnucklesController.cs" />
+    <Compile Include="Assets\LockedLevelController.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\ClearedLevelsData.cs" />
     <Compile Include="Assets\Scripts\CustomRenderQueue.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemySpriteHandler.cs" />
     <Compile Include="Assets\Scripts\ExplosionController.cs" />
     <Compile Include="Assets\Scripts\GameEvents.cs" />
+    <Compile Include="Assets\Scripts\GlobalGameMaster.cs" />
     <Compile Include="Assets\Scripts\GuiClass.cs" />
     <Compile Include="Assets\Scripts\LocalGameMaster.cs" />
     <Compile Include="Assets\Scripts\NodeBuildingController.cs" />
@@ -78,6 +82,8 @@
     <Compile Include="Assets\Scripts\ProjectileController.cs" />
     <Compile Include="Assets\Scripts\ProjectileSpriteHandler.cs" />
     <Compile Include="Assets\Scripts\RingRotator.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem.cs" />
+    <Compile Include="Assets\Scripts\ScenesManagerController.cs" />
     <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\Scripts\TowerButtonController.cs" />
     <Compile Include="Assets\Scripts\TowerCanvasController.cs" />
@@ -126,6 +132,9 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:/Nauka/uNITY/3DTowerDefence/3DTowerDefence/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>D:/Nauka/uNITY/3DTowerDefence/3DTowerDefence/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/Nauka/uNITY/3DTowerDefence/3DTowerDefence/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>

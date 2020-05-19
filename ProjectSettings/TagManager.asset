@@ -11,6 +11,9 @@ TagManager:
   - IsSelectedButtonSprite
   - Start
   - Boundary
+  - KilledEnemy
+  - Level
+  - LockImage
   layers:
   - Default
   - TransparentFX
