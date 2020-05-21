@@ -319,6 +319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c387a68a5ce20494b902b9e7e9f75c57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartPostition: {fileID: 2474514987995970492, guid: d69ba96aa6f646a4b81517b4e4d4ffbf,
+    type: 3}
   target: {fileID: 3731006097685123875, guid: 25f79784ff1ac15418a151a547f069d7, type: 3}
   anim: {fileID: 3583548970564422802}
   healthBar: {fileID: 3141617675866568235}

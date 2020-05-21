@@ -7,7 +7,8 @@ public static class SaveSystem
     public static void SaveLevels(ClearedLevelsData clearedLevelsData)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/levels.heh";
+        //string path = Application.persistentDataPath + "/levels.heh";
+        string path = Path.Combine(Application.persistentDataPath, "save.heh");
         FileStream stream = new FileStream(path, FileMode.Create);
         formatter.Serialize(stream, clearedLevelsData);
         Debug.Log ("Creating save in " + path);
@@ -16,7 +17,7 @@ public static class SaveSystem
 
     public static ClearedLevelsData LoadPlayer()
     {
-        string path = Application.persistentDataPath + "/levels.heh";
+        string path = Path.Combine(Application.persistentDataPath, "save.heh");
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();

@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    public Transform target;
+    Transform StartPostition;
+    Transform endPosition;
     public Animator anim;
     NavMeshAgent navMeshAgent;
     public Image healthBar;
@@ -15,6 +16,9 @@ public class Enemy : MonoBehaviour
     LocalGameMaster lgm;
     public int scoreAmount;
     bool targetable = true;
+
+    string endTag = "End";
+    string startTag = "Start";
 
     public enum enemyActions
     {
@@ -35,25 +39,26 @@ public class Enemy : MonoBehaviour
     }
     private void Awake()
     {
-
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        StartPostition = GameObject.FindGameObjectWithTag(startTag).transform;
+        endPosition = GameObject.FindGameObjectWithTag(endTag).transform;
+        transform.position = StartPostition.position;
     }
+
     void Start()
     {
-        navMeshAgent = GetComponent<NavMeshAgent>();
-        navMeshAgent.Warp(transform.position);
         lgm = LocalGameMaster.LGM;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        navMeshAgent.SetDestination(target.position);
+        navMeshAgent.SetDestination(endPosition.position);
 
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("End"))
+        if (other.CompareTag(endTag))
         {
             EnemyHasReachedExit();
         }

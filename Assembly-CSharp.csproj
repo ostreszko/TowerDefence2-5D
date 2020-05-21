@@ -64,8 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\KnucklesController.cs" />
-    <Compile Include="Assets\LockedLevelController.cs" />
-    <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\ClearedLevelsData.cs" />
     <Compile Include="Assets\Scripts\CustomRenderQueue.cs" />
@@ -76,6 +74,7 @@
     <Compile Include="Assets\Scripts\GlobalGameMaster.cs" />
     <Compile Include="Assets\Scripts\GuiClass.cs" />
     <Compile Include="Assets\Scripts\LocalGameMaster.cs" />
+    <Compile Include="Assets\Scripts\LockedLevelController.cs" />
     <Compile Include="Assets\Scripts\NodeBuildingController.cs" />
     <Compile Include="Assets\Scripts\ObjectPooler.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
