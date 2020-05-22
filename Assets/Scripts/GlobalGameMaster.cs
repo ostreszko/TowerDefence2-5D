@@ -4,13 +4,13 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-
     public class GlobalGameMaster : MonoBehaviour
     {
         public static GlobalGameMaster GGM;
         public static int loadedLevel = 0;
         [System.NonSerialized]
         public static ClearedLevelsData clearedLevelsData;
+        public AudioManager audioManager;
 
         private void Awake()
         {

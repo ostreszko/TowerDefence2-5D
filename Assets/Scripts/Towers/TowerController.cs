@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,11 +17,13 @@ public class TowerController : MonoBehaviour
     ObjectPooler objectPooler;
     Enemy targetedEnemy;
     public TowerDescription towerProperties;
+    GlobalGameMaster ggm;
 
     void Start()
     {
         objectPooler = ObjectPooler.Instance;
         InvokeRepeating("UpdateTerget", 0f, 0.5f);
+        ggm = GlobalGameMaster.GGM;
     }
 
     // Update is called once per frame
@@ -74,6 +77,7 @@ public class TowerController : MonoBehaviour
     void Shoot()
     {
        GameObject projectileGO =  objectPooler.SpawnFromPool("Projectile", shootingPlace.position, shootingPlace.rotation);
+        ggm.audioManager.Play("BowShooting");
        ProjectileController projectileController = projectileGO.GetComponent<ProjectileController>();
         if (projectileController != null)
         {

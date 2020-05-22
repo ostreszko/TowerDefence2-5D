@@ -896,6 +896,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1844372650}
   - component: {fileID: 1844372651}
+  - component: {fileID: 1844372652}
   m_Layer: 0
   m_Name: GlobalGameMaster
   m_TagString: Untagged
@@ -929,6 +930,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afe6ca0dff5c90646848f4b1bb11a436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 1844372652}
+--- !u!114 &1844372652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844372649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5a986d94d6586c4984187db1f866e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundList:
+  - clip: {fileID: 8300000, guid: d699c43834d7fc343b41f08037178a12, type: 3}
+    name: MenuSound
+    volume: 1
+    loop: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: ead65e7847d5c5449b0f6ffbf9974030, type: 3}
+    name: BattleSound
+    volume: 1
+    loop: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: aaf29a8aa7543494c9b050106d1caf83, type: 3}
+    name: BowShooting
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 0c01e91f4f725f9499a1f256efac6338, type: 3}
+    name: PseudoExplosion
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  DeathSounds:
+  - clip: {fileID: 8300000, guid: d1f19a0ee0b712f46bf7ce5203caa54c, type: 3}
+    name: DeathSound1
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 08d7629f8ac51494f8c797cf96742244, type: 3}
+    name: DeathSound2
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: c1e4c384c1bfd4d4eb7884a9eeb5f018, type: 3}
+    name: DeathSound3
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!1 &1854357521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,3 +1055,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854357521}
   m_CullTransparentMesh: 0
+--- !u!1001 &696504154129191263
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 696504155173138337, guid: e09f1443ee2a5814ebdcdb9661ae3445,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 299.1301
+      objectReference: {fileID: 0}
+    - target: {fileID: 696504155173138337, guid: e09f1443ee2a5814ebdcdb9661ae3445,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 851.6958
+      objectReference: {fileID: 0}
+    - target: {fileID: 696504155173138337, guid: e09f1443ee2a5814ebdcdb9661ae3445,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -691.1415
+      objectReference: {fileID: 0}
+    - target: {fileID: 696504155173138337, guid: e09f1443ee2a5814ebdcdb9661ae3445,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 696504155173138337, guid: e09f1443ee2a5814ebdcdb9661ae3445,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 696504155173138337, guid: e09f1443ee2a5814ebdcdb9661ae3445,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 696504155173138337, guid: e09f1443ee2a5814ebdcdb9661ae3445,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 696504155173138337, guid: e09f1443ee2a5814ebdcdb9661ae3445,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 696504155173138337, guid: e09f1443ee2a5814ebdcdb9661ae3445,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 696504155173138337, guid: e09f1443ee2a5814ebdcdb9661ae3445,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 696504155173138337, guid: e09f1443ee2a5814ebdcdb9661ae3445,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 696504155173138339, guid: e09f1443ee2a5814ebdcdb9661ae3445,
+        type: 3}
+      propertyPath: m_Name
+      value: MusicPlayer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e09f1443ee2a5814ebdcdb9661ae3445, type: 3}

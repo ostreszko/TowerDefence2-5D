@@ -16,7 +16,7 @@ public class ScenesManagerController : MonoBehaviour
         Application.Quit();
     }
 
-    public void LoadLevel(int levelBuildindex)
+    public void LoadLevelByBuildIndex(int levelBuildindex)
     {
         SceneManager.LoadScene(levelBuildindex);
     }

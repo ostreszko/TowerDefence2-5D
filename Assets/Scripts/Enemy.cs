@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -16,6 +17,7 @@ public class Enemy : MonoBehaviour
     LocalGameMaster lgm;
     public int scoreAmount;
     bool targetable = true;
+    GlobalGameMaster ggm;
 
     string endTag = "End";
     string startTag = "Start";
@@ -48,6 +50,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         lgm = LocalGameMaster.LGM;
+        ggm = GlobalGameMaster.GGM;
     }
 
     void Update()
@@ -73,6 +76,7 @@ public class Enemy : MonoBehaviour
         {
             GameEvents.current.OnScore(scoreAmount);
             anim.SetInteger("Action", (int)enemyActions.Death);
+            ggm.audioManager.PlayDeathSound();
             navMeshAgent.isStopped = true;
             targetable = false;
             gameObject.tag = "KilledEnemy";
