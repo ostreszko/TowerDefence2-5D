@@ -8,8 +8,8 @@ public class CameraController : MonoBehaviour
     private static readonly float ZoomSpeedTouch = 0.1f;
     private static readonly float ZoomSpeedMouse = 0.5f;
 
-    private static readonly float[] BoundsX = new float[] { -5f, 65f };
-    private static readonly float[] BoundsZ = new float[] { -10f, 45f };
+    public  float[] BoundsX = new float[] { -5f, 65f };
+    public  float[] BoundsZ = new float[] { -10f, 45f };
     private static readonly float[] ZoomBounds = new float[] { 10f, 85f };
 
     private Camera cam;
@@ -41,7 +41,6 @@ public class CameraController : MonoBehaviour
     {
         switch (Input.touchCount)
         {
-
             case 1: // Panning
                 wasZoomingLastFrame = false;
 
