@@ -1054,4 +1054,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Stage1.unity
   - Assets/Scenes/Stage2.unity
   - Assets/Scenes/StageSelection.unity
-  playerPath: D:/Nauka/uNITY/3DTowerDefence/Build/hur.apk
+  playerPath: D:/Nauka/uNITY/3DTowerDefence/Build/TowerDefence3D.apk
